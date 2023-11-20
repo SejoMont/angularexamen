@@ -1,3 +1,23 @@
 <div>
     <h1>Cubos Angular</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 90%; margin: 0 auto;">
+        <div class="col" *ngFor="let cubo of cubos">
+            <div class="card h-100">
+                <img src="{{cubo.imagen}}" class="card-img-top" style="height: 170px;">
+                <!-- <div class="card-img-top"
+                    style="height: 18vw; background-image:url('{{cubo.imagen}}');background-size: cover"></div> -->
+                <div class="card-body">
+                    <h5 class="card-title">{{cubo.modelo}}</h5>
+                    <h6 class="card-text">Marca: {{cubo.marca}}</h6>
+                    <p class="card-text">Color: {{cubo.color}}</p>
+                    <p class="card-text">Precio: {{cubo.precio}} €</p>
+                </div>
+                <div class="card-footer">
+                    <a [routerLink]="['/comentarios', cubo.idCubo]" class="btn btn-outline-success">Comentarios</a>
+                    <button class="btn btn-outline-info" *ngIf="logueado" (click)="comprarCubo(cubo.idCubo)">Comprar</button>
+                    <!-- <small class="text-body-secondary">ID: {{cubo.idCubo}}</small> -->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

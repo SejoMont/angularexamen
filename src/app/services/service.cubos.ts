@@ -12,6 +12,13 @@ import { Register } from '../models/register';
 @Injectable()
 export class ServiceCubos {
   constructor(private _http: HttpClient) {}
+  getAllCubos(): Observable<any> {
+    var request = '/api/Cubos';
+    var url = environment.apiCubos + request;
+    return this._http.get(url);
+  }
+
+
   getMarcas(): Observable<any> {
     var request = 'api/Cubos/Marcas';
     var url = environment.apiCubos + request;

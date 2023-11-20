@@ -26,7 +26,7 @@ export class LoginComponent {
       var authToken = response.response;
 
       environment.token = authToken;
-      this._router.navigate(['/perfil']);
+      this._router.navigate(['/']);
 
       console.log(response.response);
     });
