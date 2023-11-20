@@ -1,0 +1,14 @@
+<div style="width: 70%;margin: 0 auto;">
+    <h1>Login:</h1>
+    <br>
+    <form #insertForm="ngForm">
+        <label>Email:</label>
+        <input type="text" class="form-control" #cajauser name="cajauser" />
+        <label>Contraseña:</label>
+        <input type="text" class="form-control" #cajapassword name="cajapassword" />
+        <br>
+        <div class="text-end">
+            <button (click)="login()" class="btn btn-outline-success">Login</button>
+        </div>
+    </form>
+</div>

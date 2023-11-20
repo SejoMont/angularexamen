@@ -1,0 +1,16 @@
+<div style="width: 70%;margin: 0 auto;">
+    <h1>Register:</h1>
+    <br>
+    <form #insertForm="ngForm">
+        <label>Nombre:</label>
+        <input type="text" class="form-control" #cajaname name="cajaname" />
+        <label>Email:</label>
+        <input type="text" class="form-control" #cajaemail name="cajaemail" />
+        <label>Contraseña:</label>
+        <input type="text" class="form-control" #cajapassword name="cajapassword" />
+        <br>
+        <div class="text-end">
+            <button (click)="register()" class="btn btn-outline-success">Register</button>
+        </div>
+    </form>
+</div>

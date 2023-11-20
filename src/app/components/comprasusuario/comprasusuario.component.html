@@ -1,0 +1,17 @@
+<div *ngIf="compras">
+    <div *ngFor="let compra of compras">
+        <div class="card">
+            <div class="card-header">
+                idCubo: {{compra.idCubo}}
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>idPedido: {{compra.idPedido}}</p>
+                    <footer class="blockquote-footer">{{compra.fechaPedido}} </footer>
+                </blockquote>
+            </div>
+
+        </div>
+        <br>
+    </div>
+</div>
